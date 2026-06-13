@@ -27,7 +27,8 @@ class Settings:
 
 def setup_database(data):
     setup_engine = create_engine (
-        f'postgresql+psycopg2://{data.DB_USER}:{data.DB_PASS}@{data.DB_HOST}:{data.DB_PORT}/{data.DB_NAME}'
+        f'postgresql+psycopg2://{data.DB_USER}:{data.DB_PASS}@{data.DB_HOST}:{data.DB_PORT}/{data.DB_NAME}',
+        isolation_level = 'AUTOCOMMIT'
     )
 
     with setup_engine.connect() as connection:
@@ -59,8 +60,14 @@ def check_database(data):
 
         logger.warning('Database does not exist. Creating')
         connection.execute(text(f'CREATE DATABASE {data.DB_NAME} ENCODING = UTF8'))
-        setup_database(data)
-        logger.info('Database created successfully')
+
+        try:
+            setup_database(data)
+            logger.info('Database created successfully')
+        except Exception as e:
+            logger.critical('A critical error happened while executing create_tables.sql and the transaction was rolled back.')
+            logger.critical(e)
+            raise e
 
     init_engine.dispose()
 
@@ -74,12 +81,34 @@ def main(base_path):
     logger.info('Connecting to PostgreSQL')
 
     db_engine = create_engine (
-        f'postgresql+psycopg2://{data.DB_USER}:{data.DB_PASS}@{data.DB_HOST}:{data.DB_PORT}/{data.DB_NAME}'
+        f'postgresql+psycopg2://{data.DB_USER}:{data.DB_PASS}@{data.DB_HOST}:{data.DB_PORT}/{data.DB_NAME}',
+        isolation_level = 'AUTOCOMMIT'
     )
 
     logger.info('Querying DataFrames')
 
-    dataframe_names = [str(file.name).replace('.parquet.gzip', '') for file in base_path.iterdir() if file.is_file()]
+    dependence_order = (
+        'users',
+        'artists',
+        'albums',
+        'tracks',
+        'subgenres',
+        'styles',
+        'tags',
+        'tracks_subgenres',
+        'tracks_styles',
+        'tracks_tags',
+        'artist_scoring',
+        'album_scoring',
+        'track_scoring'
+    )
+
+    dataframe_names = sorted(
+        [
+            str(file.name).replace('.parquet.gzip', '')
+            for file in base_path.iterdir() if file.is_file()
+        ],
+        key = dependence_order.index)
     dataframes = dict()
 
     for dataframe_name in dataframe_names:
@@ -110,3 +139,5 @@ def run(base_path):
         return -1
 
 # April 27, 2026. 12:45 p.m. Finished
+# June 11, 2026. 5:40 p.m. Starting delicious bug fixing session
+# June 11, 2026. 7:00 p.m. Finished

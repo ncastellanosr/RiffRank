@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>RiffRank</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/Children Of Bodom.ico')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/artists.css')}}">
+    </head>
+    <body>
+        <header>
+            <h1><a id="main-link" href="{{url_for('riffrank.artists')}}">RiffRank</a> > Artists</h1>
+        </header>
+        <main>
+            <div id="artist-list">
+                {% for artist in artists %}
+                <div class="artist">
+                    <form method="POST">
+                        <button name="artist_id", value="{{artist[0]}}">
+                            <img src="{{artist[2]}}" class="artist-picture">
+                            <p class="artist-name">{{artist[1]}}</p>
+                        </button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>

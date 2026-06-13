@@ -1,91 +1,114 @@
 /* April 26, 2026. 11:10 p.m. */
 
 CREATE TABLE users (
-    id int primary key,
-    name varchar(15)
+    username varchar(16) primary key,
+    password varchar(16)
 );
 
 CREATE TABLE artists (
-    id int primary key,
-    name varchar(50),
+    id varchar(100) primary key,
+    name varchar(100),
     picture varchar(500)
 );
 
 CREATE TABLE albums (
-    id int primary key,
-    artist_id int references artists(id),
-    name varchar(50),
+    artist_id varchar(100) references artists(id),
+    id varchar(100) primary key,
+    name varchar(100),
     cover varchar(500),
-    release date
+    release varchar(10)
 );
 
 CREATE TABLE tracks (
-    id int primary key,
-    album_id int references albums(id),
+    album_id varchar(100) references albums(id),
+    id varchar(100) primary key,
     track int,
-    name varchar(50)
+    name varchar(100)
 );
 
 CREATE TABLE subgenres (
-    id int primary key,
+    id varchar(100) primary key,
     name varchar(20)
 );
 
 CREATE TABLE styles (
-    id int primary key,
+    id varchar(100) primary key,
     name varchar(20)
 );
 
 CREATE TABLE tags (
-    id int primary key,
+    id varchar(100) primary key,
     name varchar(20)
 );
 
 CREATE TABLE tracks_subgenres (
-    id int primary key,
-    track_id int references tracks(id),
-    subgenre_id int references subgenres(id)
+    id int primary key generated always as identity,
+    track_id varchar(100) references tracks(id),
+    subgenres_id varchar(100) references subgenres(id)
 );
 
 CREATE TABLE tracks_styles (
-    id int primary key,
-    track_id int references tracks(id),
-    style_id int references subgenres(id)
+    id int primary key generated always as identity,
+    track_id varchar(100) references tracks(id),
+    styles_id varchar(100) references styles(id)
 );
 
 CREATE TABLE tracks_tags (
-    id int primary key,
-    track_id int references tracks(id),
-    tag_id int references subgenres(id),
-    user_id int references users(id)
+    id int primary key generated always as identity,
+    track_id varchar(100) references tracks(id),
+    tags_id varchar(100) references tags(id),
+    user_id varchar(100) references users(username)
 );
 
 CREATE TABLE artist_scoring (
-    id int primary key,
-    artist_id int references artists(id),
-    user_id int references users(id),
+    artist_id varchar(100) references artists(id),
+    username varchar(100) references users(username),
     score int not null,
     tier int,
-    favorite boolean
+    favorite boolean,
+    primary key (artist_id, username)
 );
 
 CREATE TABLE album_scoring (
-    id int primary key,
-    album_id int references albums(id),
-    user_id int references users(id),
+    album_id varchar(100) references albums(id),
+    username varchar(100) references users(username),
     score int not null,
     tier int,
-    favorite boolean
+    favorite boolean,
+    primary key (album_id, username)
 );
 
 CREATE TABLE track_scoring (
-    id int primary key,
-    track_id int references tracks(id),
-    user_id int references users(id),
+    track_id varchar(100) references tracks(id),
+    username varchar(100) references users(username),
     score int not null,
     melody int,
     solo int,
     vocals int,
     tier int,
-    favorite boolean
+    favorite boolean,
+    primary key (track_id, username)
 );
+
+CREATE VIEW artist AS
+    SELECT
+        artists.id AS artist_id,
+        albums.id AS album_id,
+        albums.name,
+        albums.cover,
+        albums.release
+    
+    FROM artists LEFT JOIN albums
+    ON artists.id = albums.artist_id;
+
+CREATE VIEW album AS
+    SELECT
+        albums.id AS album_id,
+        tracks.id AS track_id,
+        tracks.track,
+        tracks.name
+    FROM albums LEFT JOIN tracks
+    ON albums.id = tracks.album_id;
+
+/* 5:40 p.m. Starting view creation */
+/* 7:00 p.m. Finished */

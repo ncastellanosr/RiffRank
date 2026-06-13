@@ -1,0 +1,214 @@
+.artist-name {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#artist-info button {
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+}
+
+#artist-info:hover * {
+    transform: scale(1.01);
+    color: #cc0000;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    right: 0;
+}
+
+#album-header {
+    width: 100%;
+    height: 400px;
+    padding: 75px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#album-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.album-name {
+    font-size: 48px;
+}
+
+.album-picture {
+    width: 250px;
+    height: 250px;
+    margin-right: 40px;
+    border: 3px solid #aa0000;
+    border-radius: 0 7px 7px 0;
+}
+
+.album-release {
+    font-size: 18px;
+}
+
+main::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    flex-shrink: 0;
+}
+
+table {
+    width: calc(100vw - 200px);
+    margin: 50px 100px;
+    margin-top: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 3px solid #aa0000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table * {
+    border: none;
+}
+
+tr {
+    background-color: #2a0808;
+}
+
+tr:nth-child(even) {
+    background-color: #0f0a0a;
+}
+
+th {
+    text-align: left;
+    background-color: #440000;
+}
+
+th, td {
+    padding: 10px 20px;
+}
+
+tr:hover {
+    background-color: #660000;
+}
+
+#rating {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 3px solid #aa0000;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    padding: 25px 30px;
+}
+
+.field {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type=range] {
+    width: 100%;
+    margin: 6px 0;
+    accent-color: #990000;
+}
+
+#rating button {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px 5px 10px 10px;
+    border: 2px solid #220000;
+    margin-top: 15px;
+    background-color: #770000;
+}
+
+#rating button:hover {
+    background-color: #990000;
+}
+
+output {
+    display: inline;
+}
+
+.rate-track {
+    width: 50px;
+    height: 100%;
+    background-color: #770000;
+    border: 2px solid #aa0000;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.rate-track:hover {
+    background-color: #990000;
+}
+
+dialog {
+    width: 600px;
+    margin: auto;
+    background-color: transparent;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.track-rating {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 3px solid #220000;
+    border-radius: 5px;
+    padding: 50px 50px;
+    background-color: #330000;
+}
+
+.track-rating-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.track-rating button {
+    width: 260px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px 5px 10px 10px;
+    border: 2px solid #330000;
+    margin-top: 15px;
+    background-color: #440000;
+}
+
+.track-rating button:hover {
+    background-color: #990000;
+}
+
+#title-artist-name {
+    font-size: 36px;
+    color: #cc0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#title-artist-name:hover {
+    color: #e8d5d5;
+}

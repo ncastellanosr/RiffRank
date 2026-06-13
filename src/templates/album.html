@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>RiffRank - {{artist[1]}}, {{album[2]}}</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/Children Of Bodom.ico')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/album.css')}}">
+    </head>
+    <body>
+        <header>
+            <h1 style="white-space: nowrap;">
+                <a id="main-link" href="{{url_for('riffrank.artists')}}">RiffRank</a> > 
+                <form method="POST" id="artist-info" style="display: inline;">
+                    <button id="title-artist-name" name="artist_id", value="{{artist[0]}}">
+                        {{artist[1]}}
+                    </button>
+                </form>
+                 > {{album[2]}}
+            </h1>
+        </header>
+        <main>
+            <div id="album-header">
+                <form method="POST" id="rating">
+                    <div class="field">
+                        <div class="slider-field">
+                            <p>Score: <output>{{rating[0]}}</output></p>
+                            <input
+                                type="range" name="score" id="score" min="0" max="10" value="{{rating[0]}}"
+                                oninput="this.previousElementSibling.firstElementChild.value = this.value"
+                            />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div>
+                            <input
+                                type="radio" id="none" name="tier" value="0" checked
+                            />
+                            <label for="none">No</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio" id="silver" name="tier" value="1"
+                                {% if rating[1] == 1 %}checked{% endif %}
+                            >
+                            <label for="silver">Silver</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio" id="gold" name="tier" value="2"
+                                {% if rating[1] == 2 %}checked{% endif %}
+                            >
+                            <label for="gold">Gold</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio" id="platinum" name="tier" value="3"
+                                {% if rating[1] == 3 %}checked{% endif %}
+                            >
+                            <label for="platinum">Platinum</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div>
+                            <input
+                                type="checkbox" id="favorite" name="favorite"
+                                {% if rating[2] %}checked{% endif %}
+                            >
+                            <label for="favorite">Favorite</label>
+                        </div>
+                    </div>
+                    <button type="submit" name="rate">Rate!</button>
+                </form>
+                <div id="album-info">
+                    <img src="{{album[3]}}" class="album-picture">
+                    <div class="side-text">
+                        <p class="album-name">{{album[2]}}</p>
+                        <form method="POST" id="artist-info">
+                            <button name="artist_id", value="{{artist[0]}}">
+                                <h2 class="artist-name">{{artist[1]}}</h2>
+                            </button>
+                        </form>
+                        <p class="album-release">{{album[4]}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="album-tracks">
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Track Name</th>
+                        <th>Rate</th>
+                    </tr>
+                    {% for track in tracks %}
+                    <tr>
+                        <td>{{track[2]}}</td>
+                        <td>{{track[3]}}</td>
+                        <td>
+                            <button type="button" class="rate-track" onclick="document.getElementById('dialog-{{track[1]}}').showModal()">Rate</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% for track in tracks %}
+        <dialog id="dialog-{{track[1]}}">
+            <form method="POST" class="track-rating">
+                <div class="field">
+                    <div class="slider-field">
+                        <p>Global Score: <output>{{track_ratings[track[1]][0]}}</output></p>
+                        <input
+                            type="range" name="score" id="score-{{track[1]}}" min="0" max="10" value="{{track_ratings[track[1]][0]}}"
+                            oninput="this.previousElementSibling.firstElementChild.value = this.value"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="slider-field">
+                        <p>Melody: <output>{{track_ratings[track[1]][1]['melody']}}</output></p>
+                        <input
+                            type="range" name="melody" id="melody-score-{{track[1]}}" min="0" max="10" value="{{track_ratings[track[1]][1]['melody']}}"
+                            oninput="this.previousElementSibling.firstElementChild.value = this.value"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="slider-field">
+                        <p>Solo: <output>{{track_ratings[track[1]][1]['solo']}}</output></p>
+                        <input
+                            type="range" name="solo" id="solo-score-{{track[1]}}" min="0" max="10" value="{{track_ratings[track[1]][1]['solo']}}"
+                            oninput="this.previousElementSibling.firstElementChild.value = this.value"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="slider-field">
+                        <p>Vocals: <output>{{track_ratings[track[1]][1]['vocals']}}</output></p>
+                        <input
+                            type="range" name="vocals" id="vocals-score-{{track[1]}}" min="0" max="10" value="{{track_ratings[track[1]][1]['vocals']}}"
+                            oninput="this.previousElementSibling.firstElementChild.value = this.value"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <input
+                            type="radio" id="none-{{track[1]}}" name="tier" value="0" checked
+                            {% if track_ratings[track[1]][2] == 0 %}checked{% endif %}
+                        />
+                        <label for="none-{{track[1]}}">No</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio" id="silver-{{track[1]}}" name="tier" value="1"
+                            {% if track_ratings[track[1]][2] == 1 %}checked{% endif %}
+                        />
+                        <label for="silver-{{track[1]}}">Silver</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio" id="gold-{{track[1]}}" name="tier" value="2"
+                            {% if track_ratings[track[1]][2] == 2 %}checked{% endif %}
+                        />
+                        <label for="gold-{{track[1]}}">Gold</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio" id="platinum-{{track[1]}}" name="tier" value="3"
+                            {% if track_ratings[track[1]][2] == 3 %}checked{% endif %}
+                        />
+                        <label for="platinum-{{track[1]}}">Platinum</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <input
+                            type="checkbox" id="favorite-{{track[1]}}" name="favorite"
+                            {% if track_ratings[track[1]][3] %}checked{% endif %}
+                        />
+                        <label for="favorite-{{track[1]}}">Favorite</label>
+                    </div>
+                </div>
+                <div class="track-rating-buttons">
+                    <button type="button" onclick="this.closest('dialog').close()">Cancel</button>
+                    <button type="submit" name="track_id" value="{{track[1]}}">Rate!</button>
+                </div>
+            </form>
+        </dialog>
+        {% endfor %}
+        </main>
+    </body>
+</html>

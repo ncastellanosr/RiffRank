@@ -1,0 +1,123 @@
+#artist-info {
+    position: fixed;
+    height: 90vh;
+    width: 310px;
+    padding: 30px 30px;
+    left: 0;
+    bottom: 0;
+    background-color: #220000;
+    border-right: 3px solid #aa0000;
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-picture {
+    width: 250px;
+    border: 3px solid #aa0000;
+    border-radius: 7px;
+}
+
+.artist-name {
+    font-size: 18px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    padding-left: 310px;
+}
+
+#artist-albums {
+    height: 100%;
+    padding: 75px 100px;
+    left: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#artist-albums::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    flex-shrink: 0;
+}
+
+.album {
+    width: 250px;
+}
+
+.album-picture {
+    width: 100%;
+    border: 3px solid #aa0000;
+    border-radius: 7px;
+}
+
+.album-name {
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.album button {
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.album:hover * {
+    transform: scale(1.01);
+    color: #cc0000;
+}
+
+.album-picture:hover {
+    box-shadow: 0 0 15px 5px #cc0000;
+}
+
+#rating {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.field {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#slider-field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type=range] {
+    width: 100%;
+    margin: 6px 0;
+    accent-color: #990000;
+}
+
+#rating button {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px 5px 10px 10px;
+    border: 2px solid #220000;
+    margin-top: 15px;
+    background-color: #770000;
+}
+
+#rating button:hover {
+    background-color: #990000;
+}
+
+output {
+    display: inline;
+}

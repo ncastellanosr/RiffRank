@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>RiffRank - {{artist[1]}}</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/Children Of Bodom.ico')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/artist.css')}}">
+    </head>
+    <body>
+        <header>
+            <h1><a id="main-link" href="{{url_for('riffrank.artists')}}">RiffRank</a> > {{artist[1]}}</h1>
+        </header>
+        <aside id="artist-info">
+            <img src="{{artist[2]}}" class="artist-picture">
+            <h2 class="artist-name">{{artist[1]}}</h2>
+            <form method="POST" id="rating">
+                <div class="field">
+                    <div id="slider-field">
+                        <p>Score: <output>{{rating[0]}}</output></p>
+                        <input
+                            type="range" name="score" id="score" min="0" max="10" value="{{rating[0]}}"
+                            oninput="this.previousElementSibling.firstElementChild.value = this.value"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <input
+                            type="radio" id="none" name="tier" value="0" checked
+                        />
+                        <label for="none">No</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio" id="silver" name="tier" value="1"
+                            {% if rating[1] == 1 %}checked{% endif %}
+                        >
+                        <label for="silver">Silver</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio" id="gold" name="tier" value="2"
+                            {% if rating[1] == 2 %}checked{% endif %}
+                        >
+                        <label for="gold">Gold</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio" id="platinum" name="tier" value="3"
+                            {% if rating[1] == 3 %}checked{% endif %}
+                        >
+                        <label for="platinum">Platinum</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <input
+                            type="checkbox" id="favorite" name="favorite" {% if rating[2] %}checked{% endif %}
+                        >
+                        <label for="favorite">Favorite</label>
+                    </div>
+                </div>
+                <button type="submit" name="rate">Rate!</button>
+            </form>
+        </aside>
+        <main>
+            <div id="artist-albums">
+                {% for album in albums %}
+                <div class="album">
+                    <form method="POST">
+                        <button name="album_id", value="{{album[1]}}">
+                            <img src="{{album[3]}}" class="album-picture">
+                            <p class="album-name">{{album[2]}}</p>
+                            <p class="album-release">{{album[4]}}</p>
+                        </button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>

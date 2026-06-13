@@ -293,6 +293,13 @@ def main(base_path, status_path):
             logger.info(f'Ingestion for artist {artist_id} was completed successfully ({artist_index + 1} out of {total_artists})')
             status_object[artist_id]['ingestion'] = 'OK'
 
+        except KeyboardInterrupt:
+            logger.error(f'Ingestion for artist {artist_id} ({artist_index + 1} out of {total_artists}) failed unrecoverably')
+            status_object[artist_id]['ingestion'] = 'FAIL'
+            logger.warning(f'All progress for artist {artist_id} ({artist_index + 1} out of {total_artists}) will be deleted')
+            shutil.rmtree(artist_path)
+            return
+
         except Exception as e:
             logger.error(f'Ingestion for artist {artist_id} ({artist_index + 1} out of {total_artists}) failed unrecoverably')
             status_object[artist_id]['ingestion'] = 'FAIL'

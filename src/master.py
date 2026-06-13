@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-import spotify_preload
-import spotify_ingestion
+import preload
+import ingest
 import normalize
-import enrichment
+import enrich
 import database
 
 @dataclass
@@ -70,37 +70,37 @@ if __name__ == '__main__':
         auto_mode = input('Do you wish to perform the automatic mode? y/n: ')
         auto_mode = True if auto_mode == 'y' else False
 
-        preload = 'y' if auto_mode else input('Do you wish to perform the preload? y/n: ')
+        preload_prompt = 'y' if auto_mode else input('Do you wish to perform the preload? y/n: ')
 
-        if preload == 'y':
+        if preload_prompt == 'y':
             logger.info('Initiating preload program')
-            spotify_preload.run(datalake_path, status_path)
+            preload.run(datalake_path, status_path)
             logger.info('Preload was successful')
 
-        ingestion = 'y' if auto_mode else input('Do you wish to perform the ingestion? y/n: ')
+        ingest_prompt = 'y' if auto_mode else input('Do you wish to perform the ingestion? y/n: ')
 
-        if ingestion == 'y':
+        if ingest_prompt == 'y':
             logger.info('Initiating ingestion program')
-            spotify_ingestion.run(datalake_path, status_path)
+            ingest.run(datalake_path, status_path)
             logger.info('Ingestion was successful')
 
-        normalization = 'y' if auto_mode else input('Do you wish to perform the normalization? y/n: ')
+        normalize_prompt = 'y' if auto_mode else input('Do you wish to perform the normalization? y/n: ')
 
-        if normalization == 'y':
+        if normalize_prompt == 'y':
             logger.info('Initiating normalization program')
             duration = normalize.run(datalake_path, normalized_path, status_path)
             logger.info(f'Normalization was successfully completed in {duration:.3f}s')
         
-        enrich = 'y' if auto_mode else input('Do you wish to perform the data enrichment? y/n: ')
+        enrich_prompt = 'y' if auto_mode else input('Do you wish to perform the data enrichment? y/n: ')
 
-        if enrich == 'y':
+        if enrich_prompt == 'y':
             logger.info('Initiating data enrichment program')
-            enrichment.run(datalake_path, normalized_path)
+            enrich.run(datalake_path, normalized_path)
             logger.info(f'Data enrichment was successful')
         
-        database_setup = 'y' if auto_mode else input('Do you wish to perform the database setup? y/n: ')
+        database_prompt = 'y' if auto_mode else input('Do you wish to perform the database setup? y/n: ')
 
-        if database_setup == 'y':
+        if database_prompt == 'y':
             logger.info('Initiating database setup program')
             database.run(normalized_path)
             logger.info(f'Database setup was successful')
