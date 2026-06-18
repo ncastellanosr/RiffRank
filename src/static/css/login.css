@@ -9,11 +9,12 @@ main {
     justify-items: center;
     align-items: center;
     padding: 70px 50px;
-    background-color: #440000;
+    background-color: #ffeaea;
 }
 
 form {
     margin-top: -10px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -40,7 +41,7 @@ form h2 {
     padding: 5px 15px;
     font-size: 18px;
     border: 2px solid #220000;
-    background-color: #770000;
+    background-color: #ffc9c9;
 }
 
 .radio-field * {
@@ -51,9 +52,13 @@ form h2 {
 button {
     width: 100%;
     margin-top: 15px;
-    background-color: #770000;
+    background-color: #ff5d5d;
 }
 
 button:hover {
-    background-color: #990000;
+    background-color: #ff3300;
+}
+
+#signup-invitation {
+    height: 10px;
 }

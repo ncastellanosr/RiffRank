@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/Children Of Bodom.ico')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            {% block header %}
+            {% endblock %}
+            <nav>
+                <div id="searchbar-container">
+                    <form method="POST" id="search-form">
+                        <input type="search" name="search_string" id="searchbar" placeholder="Search">
+                        <button type="submit" name="search">S</button>
+                    </form>
+                </div>
+                <div id="user-info">
+                    <form method="POST">
+                        <button name="profile-page">
+                            <img id="user-photo" src="{{url_for('static', filename='img/User.png')}}">
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        {% block aside %}
+        {% endblock %}
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+    </body>
+</html>

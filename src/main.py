@@ -1,10 +1,18 @@
 # June 12, 2026. 1:50 p.m.
 
 from flask import Flask
-from backend_feed import riffrank
+from backend_feed import riffrank, session
+from schema import schema, CustomGraphQLView
+import strawberry
+from strawberry.flask.views import GraphQLView
 
 index = Flask(__name__)
 index.register_blueprint(riffrank, url_prefix = '/')
+
+index.add_url_rule(
+    '/graphql',
+    view_func = CustomGraphQLView.as_view('graphql_view', schema = schema)
+)
 
 if __name__ == '__main__':
     index.run(debug = True, port = 8000)

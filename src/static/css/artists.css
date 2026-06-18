@@ -22,12 +22,16 @@ main {
 
 .artist {
     width: 250px;
+    padding-bottom: 10px;
 }
 
 .artist-picture {
     width: 100%;
-    border: 3px solid #aa0000;
+    height: 250px;
     border-radius: 7px;
+    object-fit: contain;
+    border: 3px solid #ff6f00;
+    background-color: black;
 }
 
 .artist-name {
@@ -41,8 +45,11 @@ main {
     background-color: transparent;
 }
 
+.artist:hover {
+    transform: scale(1.05);
+}
+
 .artist:hover * {
-    transform: scale(1.01);
     color: #cc0000;
 }
 

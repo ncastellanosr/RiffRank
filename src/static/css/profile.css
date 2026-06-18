@@ -1,0 +1,77 @@
+main {
+    width: 100%;
+    height: 90vh;
+    padding: 75px 100px;
+}
+
+#profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#profile-photo-big {
+    width: 250px;
+    height: 250px;
+    margin-right: 25px;
+}
+
+#username {
+    font-size: 42px;
+    background-color: transparent;
+}
+
+#profile-header {
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#username:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#profile-bio {
+    resize: none;
+    padding: 5px 10px;
+    background-color: #ffe6d6;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 75%;
+}
+
+#profile-bio:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#profile-additional form {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#profile-header button {
+    width: 50px;
+    height: 50px;
+    background-color: #ffaeae;
+    border: 2px solid #4f2525;
+    border-radius: 5px;
+}
+
+#profile-header button:hover {
+    background-color: #ff5d5d;
+}
+
+#profile-header button:active {
+    background-color: #a8a8a8;
+}

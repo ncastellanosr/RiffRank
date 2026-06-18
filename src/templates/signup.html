@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>RiffRank - Sign Up</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/Children Of Bodom.ico')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    </head>
+    <body>
+        <header>
+            <h1>RiffRank</h1>
+        </header>
+        <main>
+            <form method="POST">
+                <h2>Register</h2>
+                <div class="field">
+                    <p>Email</p>
+                    <input type="email" class="input-field" name="email">
+                </div>
+                <div class="field">
+                    <p>Username</p>
+                    <input type="text" class="input-field" name="username">
+                </div>
+                <div class="field">
+                    <p>Password</p>
+                    <input type="password" class="input-field" name="password">
+                </div>
+                <div class="field">
+                    <p>Confirm Password</p>
+                    <input type="password" class="input-field" name="confirm-password">
+                </div>
+                <button type="submit" name="submit">Submit</button>
+            </form>
+            <p id="error">{{ error }}</p>
+            <p id="signup-invitation">Already have an account? <a href="/">Login</a></p>
+        </main>
+    </body>
+</html>

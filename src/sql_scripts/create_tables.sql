@@ -1,8 +1,10 @@
 /* April 26, 2026. 11:10 p.m. */
 
 CREATE TABLE users (
-    username varchar(16) primary key,
-    password varchar(16)
+    email varchar(50) primary key,
+    username varchar(16) unique,
+    password varchar(16),
+    description text
 );
 
 CREATE TABLE artists (
@@ -109,6 +111,20 @@ CREATE VIEW album AS
         tracks.name
     FROM albums LEFT JOIN tracks
     ON albums.id = tracks.album_id;
+
+CREATE VIEW track AS
+    SELECT
+        artists.id AS artist_id,
+        artists.name AS artist_name,
+        albums.id AS album_id,
+        albums.name AS album_name,
+        albums.cover,
+        tracks.id,
+        tracks.name
+    FROM tracks LEFT JOIN albums
+    ON albums.id = tracks.album_id
+    LEFT JOIN artists
+    ON albums.artist_id = artists.id;
 
 /* 5:40 p.m. Starting view creation */
 /* 7:00 p.m. Finished */

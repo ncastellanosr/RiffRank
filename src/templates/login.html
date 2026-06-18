@@ -9,11 +9,11 @@
     </head>
     <body>
         <header>
-            <h1><a id="main-link" href="{{url_for('riffrank.artists')}}">RiffRank</a></h1>
+            <h1>RiffRank</h1>
         </header>
         <main>
             <form method="POST">
-                <h2>Log In / Register</h2>
+                <h2>Log In</h2>
                 <div class="field">
                     <p>Username</p>
                     <input type="text" class="input-field" name="username">
@@ -22,18 +22,10 @@
                     <p>Password</p>
                     <input type="password" class="input-field" name="password">
                 </div>
-                <div class="field">
-                    <div class="radio-field">
-                        <input type="radio" id="login" name="action" value="login" checked>
-                        <label for="login">Log In</label>
-                    </div>
-                    <div class="radio-field">
-                        <input type="radio" id="signup" name="action" value="signup">
-                        <label for="signup">Sign Up</label>
-                    </div>
-                </div>
                 <button type="submit" name="submit">Submit</button>
             </form>
+            <p id="error">{{ error }}</p>
+            <p id="signup-invitation">Don't have an account? <a href="signup">Register</a></p>
         </main>
     </body>
 </html>

@@ -46,7 +46,7 @@ main {
     width: 250px;
     height: 250px;
     margin-right: 40px;
-    border: 3px solid #aa0000;
+    border: 3px solid #ff7c2b;
     border-radius: 0 7px 7px 0;
 }
 
@@ -68,7 +68,7 @@ table {
     margin-top: 0;
     border-collapse: separate;
     border-spacing: 0;
-    border: 3px solid #aa0000;
+    border: 3px solid #ff7c2b;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -78,16 +78,16 @@ table * {
 }
 
 tr {
-    background-color: #2a0808;
+    background-color: #ffe1d3;
 }
 
 tr:nth-child(even) {
-    background-color: #0f0a0a;
+    background-color: #f0f0f0;
 }
 
 th {
     text-align: left;
-    background-color: #440000;
+    background-color: #ff9670;
 }
 
 th, td {
@@ -95,7 +95,7 @@ th, td {
 }
 
 tr:hover {
-    background-color: #660000;
+    background-color: #ff9a9a;
 }
 
 #rating {
@@ -103,7 +103,7 @@ tr:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 3px solid #aa0000;
+    border: 3px solid #ff7c2b;
     border-right: none;
     border-radius: 5px 0 0 5px;
     padding: 25px 30px;
@@ -127,7 +127,7 @@ tr:hover {
 input[type=range] {
     width: 100%;
     margin: 6px 0;
-    accent-color: #990000;
+    accent-color: #ff6200;
 }
 
 #rating button {
@@ -137,11 +137,11 @@ input[type=range] {
     border-radius: 5px 5px 10px 10px;
     border: 2px solid #220000;
     margin-top: 15px;
-    background-color: #770000;
+    background-color: #ff7c2b;
 }
 
 #rating button:hover {
-    background-color: #990000;
+    background-color: #ff6200;
 }
 
 output {
@@ -151,14 +151,14 @@ output {
 .rate-track {
     width: 50px;
     height: 100%;
-    background-color: #770000;
-    border: 2px solid #aa0000;
+    background-color: #ffe1e1;
+    border: 2px solid #ff7c2b;
     font-size: 12px;
     padding: 2px;
 }
 
 .rate-track:hover {
-    background-color: #990000;
+    background-color: #ff6200;
 }
 
 dialog {
@@ -179,7 +179,7 @@ dialog::backdrop {
     border: 3px solid #220000;
     border-radius: 5px;
     padding: 50px 50px;
-    background-color: #330000;
+    background-color: #ffeaea;
 }
 
 .track-rating-buttons {
@@ -195,20 +195,20 @@ dialog::backdrop {
     border-radius: 5px 5px 10px 10px;
     border: 2px solid #330000;
     margin-top: 15px;
-    background-color: #440000;
+    background-color: #ff7c2b;
 }
 
 .track-rating button:hover {
-    background-color: #990000;
+    background-color: #ff6200;
 }
 
 #title-artist-name {
     font-size: 36px;
-    color: #cc0000;
+    color: #f88528;
     text-decoration: none;
     font-weight: bold;
 }
 
 #title-artist-name:hover {
-    color: #e8d5d5;
+    color: #c03a00;
 }

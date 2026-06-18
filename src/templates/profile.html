@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>RiffRank</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/profile.css')}}">
+{% endblock %}
+
+{% block header %}
+    <h1><a id="main-link" href="{{url_for('riffrank.artists')}}">RiffRank</a> > {{username}}</h1>
+{% endblock %}
+
+{% block main %}
+    <div id="profile-info">
+        <img id="profile-photo-big" src="{{url_for('static', filename='img/User.png')}}">
+        <div id="profile-additional">
+            <form method="POST">
+                <div id="profile-header">
+                    <input type="text" name="username" id="username" value="{{username}}">
+                    <button type="submit" name="save-changes">S</button>
+                </div>
+                <textarea id="profile-bio" name="profile-bio">{{bio}}</textarea>
+            </form>
+        </div>
+    </div>
+{% endblock %}

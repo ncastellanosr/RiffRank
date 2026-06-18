@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>RiffRank</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/search.css')}}">
+{% endblock %}
+
+{% block header %}
+    <h1><a id="main-link" href="{{url_for('riffrank.search')}}">RiffRank</a> > Search Results</h1>
+{% endblock %}
+
+{% block main %}
+    <p>Showing results for the search: '{{ search_string }}'</p>
+    <h2>Artists</h2>
+    <div class="card-list">
+        {% for artist in artists %}
+        <div class="card">
+            <form method="POST">
+                <button name="artist_id", value="{{artist[0]}}">
+                    <img src="{{artist[2]}}" class="card-picture">
+                    <p class="card-name">{{artist[1]}}</p>
+                </button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <h2>Albums</h2>
+    <div class="card-list">
+        {% for album in albums %}
+        <div class="card">
+            <form method="POST">
+                <button name="album_id", value="{{album[1]}}">
+                    <img src="{{album[3]}}" class="card-picture">
+                    <p class="card-name">{{album[2]}}</p>
+                </button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <h2>Tracks</h2>
+    <div class="track-card-list card-list">
+        {% for track in tracks %}
+        <form method="POST" class="track-card card">
+            <button name="album_id" value="{{track[2]}}">
+                <img src="{{track[4]}}" class="track-card-picture card-picture">
+            </button>
+            <div class="track-info">
+                <h3 class="track-card-name card-name">{{track[6]}}</h3>
+                <button name="artist_id" value="{{track[0]}}">
+                    <h3 class="artist-name">{{track[1]}}</h3>
+                </button>
+                <button name="album_id" value="{{track[2]}}">
+                    <h3 class="album-name">{{track[3]}}</h3>
+                </button>
+            </div>
+        </form>
+        {% endfor %}
+    </div>
+{% endblock %}

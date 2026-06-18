@@ -1,0 +1,13 @@
+2026-06-17 14:57:30,572 MASTER INFO Performing settings
+2026-06-17 14:57:33,387 MASTER INFO Initiating database setup program
+2026-06-17 14:57:33,388 DATABASE INFO Loading environment data
+2026-06-17 14:57:33,388 DATABASE INFO Checking database existence
+2026-06-17 14:57:33,443 DATABASE ERROR (psycopg2.errors.InvalidCatalogName) database "riffrank" does not exist
+
+[SQL: DROP DATABASE riffrank]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-06-17 14:57:33,444 DATABASE WARNING Database does not exist. Creating
+2026-06-17 14:57:33,467 DATABASE CRITICAL A critical error happened while executing create_tables.sql and the transaction was rolled back.
+2026-06-17 14:57:33,467 DATABASE CRITICAL [Errno 2] No such file or directory: 'sql_scripts/create_tables.sql'
+2026-06-17 14:57:33,467 DATABASE CRITICAL [Errno 2] No such file or directory: 'sql_scripts/create_tables.sql'
+2026-06-17 14:57:33,467 MASTER INFO Database setup was successful

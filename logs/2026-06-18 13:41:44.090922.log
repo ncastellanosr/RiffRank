@@ -1,0 +1,422 @@
+2026-06-18 13:41:44,091 BACKEND LOW INFO Authenticating
+2026-06-18 13:41:44,091 BACKEND LOW INFO Executing Log In
+2026-06-18 13:41:44,091 BACKEND LOW INFO Setting Up
+2026-06-18 13:41:44,122 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:41:44,136 BACKEND LOW ERROR Unable to Log In
+2026-06-18 13:41:44,136 BACKEND LOW INFO Log In Did Not Finish Successfully
+2026-06-18 13:41:44,136 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-18 13:41:44,603 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:44] "GET /login?error=invalid_credentials HTTP/1.1" 200 -
+2026-06-18 13:41:45,804 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:45] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:41:45,931 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:45] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2026-06-18 13:41:51,388 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:51] "GET /signup HTTP/1.1" 200 -
+2026-06-18 13:41:52,384 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:52] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:41:52,484 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:41:52] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2026-06-18 13:42:21,568 BACKEND LOW INFO Creating Account
+2026-06-18 13:42:21,568 BACKEND LOW INFO Executing Sign Up
+2026-06-18 13:42:21,568 BACKEND LOW INFO Setting Up
+2026-06-18 13:42:21,568 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:42:21,579 BACKEND LOW INFO Sign Up Finished Successfully
+2026-06-18 13:42:21,579 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:42:21,580 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:21] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2026-06-18 13:42:21,825 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:21] "GET /login HTTP/1.1" 200 -
+2026-06-18 13:42:22,282 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:22] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2026-06-18 13:42:22,283 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:22] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:42:32,732 BACKEND LOW INFO Authenticating
+2026-06-18 13:42:32,732 BACKEND LOW INFO Executing Log In
+2026-06-18 13:42:32,732 BACKEND LOW INFO Setting Up
+2026-06-18 13:42:32,733 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:42:32,742 BACKEND LOW INFO Log In Finished Successfully
+2026-06-18 13:42:32,743 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:42:32,743 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-18 13:42:33,242 BACKEND LOW INFO Performing Action
+2026-06-18 13:42:33,242 BACKEND LOW INFO Setting Up
+2026-06-18 13:42:33,243 BACKEND LOW INFO Preparing to execute the function <function list_artists at 0x718fcb60c360> with arguments []
+2026-06-18 13:42:33,243 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:42:33,243 BACKEND LOW INFO Executing list_artists Query
+2026-06-18 13:42:33,244 BACKEND LOW INFO list_artists Query was successful
+2026-06-18 13:42:33,244 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:42:33,249 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:33] "GET /artists HTTP/1.1" 200 -
+2026-06-18 13:42:33,574 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:33] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:42:33,580 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:33] "GET /static/css/artists.css HTTP/1.1" 200 -
+2026-06-18 13:42:33,960 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:42:33] "GET /static/img/User.jpg HTTP/1.1" 200 -
+2026-06-18 13:43:02,732 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:02] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-18 13:43:02,733 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-18 13:43:02,937 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:02] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-18 13:43:20,565 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:20,565 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:20,565 BACKEND LOW INFO Preparing to execute the function <function search_artists at 0x718fcb60c900> with arguments ['Bidón']
+2026-06-18 13:43:20,565 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:20,568 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:20,568 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:20,568 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:20,568 BACKEND LOW INFO Preparing to execute the function <function search_albums at 0x718fcb60c9a0> with arguments ['Bidón']
+2026-06-18 13:43:20,568 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:20,570 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:20,570 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:20,570 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:20,570 BACKEND LOW INFO Preparing to execute the function <function search_tracks at 0x718fcb60ca40> with arguments ['Bidón']
+2026-06-18 13:43:20,570 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:20,573 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:20,573 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:20] "[32mPOST /artists HTTP/1.1[0m" 302 -
+2026-06-18 13:43:20,961 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:20] "GET /search HTTP/1.1" 200 -
+2026-06-18 13:43:21,264 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:21,264 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:21,264 BACKEND LOW INFO Preparing to execute the function <function search_artists at 0x718fcb60c900> with arguments ['Bidón']
+2026-06-18 13:43:21,264 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:21,265 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:21,265 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:21,265 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:21,265 BACKEND LOW INFO Preparing to execute the function <function search_albums at 0x718fcb60c9a0> with arguments ['Bidón']
+2026-06-18 13:43:21,265 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:21,266 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:21,266 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:21,266 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:21,266 BACKEND LOW INFO Preparing to execute the function <function search_tracks at 0x718fcb60ca40> with arguments ['Bidón']
+2026-06-18 13:43:21,266 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:21,268 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:21,268 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:21] "[32mPOST /artists HTTP/1.1[0m" 302 -
+2026-06-18 13:43:21,573 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:21] "GET /search HTTP/1.1" 200 -
+2026-06-18 13:43:22,700 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:22] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:43:22,701 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:22] "[36mGET /static/img/User.jpg HTTP/1.1[0m" 304 -
+2026-06-18 13:43:22,705 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:22] "GET /static/css/search.css HTTP/1.1" 200 -
+2026-06-18 13:43:30,793 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:30,793 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:30,793 BACKEND LOW INFO Preparing to execute the function <function search_artists at 0x718fcb60c900> with arguments ['Bodom ']
+2026-06-18 13:43:30,793 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:30,794 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:30,794 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:30,794 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:30,794 BACKEND LOW INFO Preparing to execute the function <function search_albums at 0x718fcb60c9a0> with arguments ['Bodom ']
+2026-06-18 13:43:30,794 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:30,795 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:30,795 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:30,795 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:30,795 BACKEND LOW INFO Preparing to execute the function <function search_tracks at 0x718fcb60ca40> with arguments ['Bodom ']
+2026-06-18 13:43:30,795 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:30,797 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:30,797 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:30] "[32mPOST /search HTTP/1.1[0m" 302 -
+2026-06-18 13:43:31,097 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:31] "GET /search HTTP/1.1" 200 -
+2026-06-18 13:43:31,391 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:31] "[36mGET /static/img/User.jpg HTTP/1.1[0m" 304 -
+2026-06-18 13:43:31,393 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:31] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:43:31,393 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:31] "[36mGET /static/css/search.css HTTP/1.1[0m" 304 -
+2026-06-18 13:43:41,849 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:41] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-18 13:43:41,850 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-18 13:43:41,950 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:41] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-18 13:43:50,450 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:50] "[32mPOST /search HTTP/1.1[0m" 302 -
+2026-06-18 13:43:51,010 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,011 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,011 BACKEND LOW INFO Preparing to execute the function <function list_album at 0x718fcb60c4a0> with arguments ['70SIbPN8OGNl9TtwsAe2RM']
+2026-06-18 13:43:51,011 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,011 BACKEND LOW INFO Executing list_album Query
+2026-06-18 13:43:51,015 BACKEND LOW INFO list_album Query was successful
+2026-06-18 13:43:51,015 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,015 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,015 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,015 BACKEND LOW INFO Preparing to execute the function <function list_artist at 0x718fcb60c400> with arguments ['1xUhNgw4eJDZfvumIpcz1B']
+2026-06-18 13:43:51,016 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,016 BACKEND LOW INFO Executing list_artist Query
+2026-06-18 13:43:51,018 BACKEND LOW INFO list_artist Query was successful
+2026-06-18 13:43:51,018 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,018 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,018 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,018 BACKEND LOW INFO Preparing to execute the function <function get_album_rating at 0x718fcb60c7c0> with arguments ['70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo']
+2026-06-18 13:43:51,018 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,019 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,019 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,019 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,019 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['266B3fma0lm0dlvG7Y0xAb', 'Nicobolo']
+2026-06-18 13:43:51,019 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,020 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,020 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,021 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,021 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['2ZUNu821yEep2HDhqdiW2I', 'Nicobolo']
+2026-06-18 13:43:51,021 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,021 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,021 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,021 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,021 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['7BdU8966BjT89aGjzBYEyc', 'Nicobolo']
+2026-06-18 13:43:51,022 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,022 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,022 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,022 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,022 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['2W93TFRFxwtXJrFKjIjHBy', 'Nicobolo']
+2026-06-18 13:43:51,022 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,023 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,023 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,023 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,023 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['1EVximLuJ0CT9YOxmUmZkV', 'Nicobolo']
+2026-06-18 13:43:51,023 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,024 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,024 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,024 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,024 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['0afEzeHE8HKSFrPOpVsllz', 'Nicobolo']
+2026-06-18 13:43:51,024 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,025 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,025 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,025 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,025 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['28Mc4EnGvpXZmqDw6lq3n3', 'Nicobolo']
+2026-06-18 13:43:51,025 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,026 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,026 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,026 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,026 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['4264BNIdNozFBHiSM6gjd8', 'Nicobolo']
+2026-06-18 13:43:51,026 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,026 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,027 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,027 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,027 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['0YtXa98R37YMimtlrj7OVz', 'Nicobolo']
+2026-06-18 13:43:51,027 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,027 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,027 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,027 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,027 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['7yBvoQKWtOJ9yk5kuAusCp', 'Nicobolo']
+2026-06-18 13:43:51,027 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,028 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,028 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,028 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,028 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['47mX64ZrnihhxcmVJFpgow', 'Nicobolo']
+2026-06-18 13:43:51,028 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,028 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,028 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,028 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,028 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['5cNdxhsddXJv9i8dsYwRt9', 'Nicobolo']
+2026-06-18 13:43:51,028 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,029 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,029 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,029 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,029 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['3oJmtmYvSE2ZtT7hdIWI9x', 'Nicobolo']
+2026-06-18 13:43:51,029 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,029 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,030 BACKEND LOW INFO Performing Action
+2026-06-18 13:43:51,030 BACKEND LOW INFO Setting Up
+2026-06-18 13:43:51,030 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['3h0RwraaqZazV1XCkziTi8', 'Nicobolo']
+2026-06-18 13:43:51,030 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:43:51,030 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:43:51,039 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:51] "GET /album HTTP/1.1" 200 -
+2026-06-18 13:43:51,536 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:51] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:43:51,540 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:51] "GET /static/css/album.css HTTP/1.1" 200 -
+2026-06-18 13:43:51,624 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:43:51] "[36mGET /static/img/User.jpg HTTP/1.1[0m" 304 -
+2026-06-18 13:44:00,183 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:00] "GET / HTTP/1.1" 200 -
+2026-06-18 13:44:00,408 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:00] "GET /static/css/global.css HTTP/1.1" 200 -
+2026-06-18 13:44:00,414 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:00] "GET /static/img/User.jpg HTTP/1.1" 200 -
+2026-06-18 13:44:00,414 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:00] "GET /static/css/artists.css HTTP/1.1" 200 -
+2026-06-18 13:44:00,997 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:00,998 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:00,998 BACKEND LOW INFO Preparing to execute the function <function rate_album at 0x718fcb60c5e0> with arguments ['70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo', 0, 0, False]
+2026-06-18 13:44:00,998 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:00,998 BACKEND LOW INFO Executing rate_album Query
+2026-06-18 13:44:00,999 BACKEND LOW INFO Album not rated. Creating entry
+2026-06-18 13:44:01,003 BACKEND LOW CRITICAL An unknown error has occurred!
+2026-06-18 13:44:01,003 BACKEND LOW CRITICAL (psycopg2.errors.ForeignKeyViolation) insert or update on table "album_scoring" violates foreign key constraint "album_scoring_username_fkey"
+DETAIL:  Key (username)=(Nicobolo) is not present in table "users".
+
+[SQL: INSERT INTO album_scoring (album_id, username, score, tier, favorite)VALUES ('70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo', '0', '0', 'False');]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-06-18 13:44:01,004 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,004 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,004 BACKEND LOW INFO Preparing to execute the function <function list_album at 0x718fcb60c4a0> with arguments ['70SIbPN8OGNl9TtwsAe2RM']
+2026-06-18 13:44:01,004 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,004 BACKEND LOW INFO Executing list_album Query
+2026-06-18 13:44:01,005 BACKEND LOW INFO list_album Query was successful
+2026-06-18 13:44:01,005 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,005 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,005 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,005 BACKEND LOW INFO Preparing to execute the function <function list_artist at 0x718fcb60c400> with arguments ['1xUhNgw4eJDZfvumIpcz1B']
+2026-06-18 13:44:01,005 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,005 BACKEND LOW INFO Executing list_artist Query
+2026-06-18 13:44:01,006 BACKEND LOW INFO list_artist Query was successful
+2026-06-18 13:44:01,006 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,006 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,006 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,006 BACKEND LOW INFO Preparing to execute the function <function get_album_rating at 0x718fcb60c7c0> with arguments ['70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo']
+2026-06-18 13:44:01,006 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,006 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,006 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,006 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,006 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['266B3fma0lm0dlvG7Y0xAb', 'Nicobolo']
+2026-06-18 13:44:01,006 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,007 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,007 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,007 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,007 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['2ZUNu821yEep2HDhqdiW2I', 'Nicobolo']
+2026-06-18 13:44:01,007 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,007 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,008 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,008 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,008 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['7BdU8966BjT89aGjzBYEyc', 'Nicobolo']
+2026-06-18 13:44:01,008 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,008 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,008 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,008 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,008 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['2W93TFRFxwtXJrFKjIjHBy', 'Nicobolo']
+2026-06-18 13:44:01,008 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,009 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,009 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,009 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,009 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['1EVximLuJ0CT9YOxmUmZkV', 'Nicobolo']
+2026-06-18 13:44:01,009 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,010 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,010 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,010 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,010 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['0afEzeHE8HKSFrPOpVsllz', 'Nicobolo']
+2026-06-18 13:44:01,010 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,010 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,010 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,010 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,010 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['28Mc4EnGvpXZmqDw6lq3n3', 'Nicobolo']
+2026-06-18 13:44:01,010 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,011 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,011 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,011 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,011 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['4264BNIdNozFBHiSM6gjd8', 'Nicobolo']
+2026-06-18 13:44:01,011 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,011 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,011 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,011 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,011 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['0YtXa98R37YMimtlrj7OVz', 'Nicobolo']
+2026-06-18 13:44:01,011 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,012 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,012 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,012 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,012 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['7yBvoQKWtOJ9yk5kuAusCp', 'Nicobolo']
+2026-06-18 13:44:01,012 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,012 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,012 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,012 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,013 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['47mX64ZrnihhxcmVJFpgow', 'Nicobolo']
+2026-06-18 13:44:01,013 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,013 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,013 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,013 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,013 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['5cNdxhsddXJv9i8dsYwRt9', 'Nicobolo']
+2026-06-18 13:44:01,013 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,013 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,014 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,014 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,014 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['3oJmtmYvSE2ZtT7hdIWI9x', 'Nicobolo']
+2026-06-18 13:44:01,014 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,014 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,014 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:01,014 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:01,014 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['3h0RwraaqZazV1XCkziTi8', 'Nicobolo']
+2026-06-18 13:44:01,014 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:01,015 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:01,015 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:01] "POST /album HTTP/1.1" 200 -
+2026-06-18 13:44:01,917 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:01] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:44:01,918 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:01] "[36mGET /static/css/album.css HTTP/1.1[0m" 304 -
+2026-06-18 13:44:01,936 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:01] "[36mGET /static/img/User.jpg HTTP/1.1[0m" 304 -
+2026-06-18 13:44:02,271 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:02] "GET /static/img/Children%20Of%20Bodom.ico HTTP/1.1" 200 -
+2026-06-18 13:44:19,603 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,603 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,603 BACKEND LOW INFO Preparing to execute the function <function rate_album at 0x718fcb60c5e0> with arguments ['70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo', 0, 1, False]
+2026-06-18 13:44:19,603 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,603 BACKEND LOW INFO Executing rate_album Query
+2026-06-18 13:44:19,604 BACKEND LOW INFO Album not rated. Creating entry
+2026-06-18 13:44:19,605 BACKEND LOW CRITICAL An unknown error has occurred!
+2026-06-18 13:44:19,605 BACKEND LOW CRITICAL (psycopg2.errors.ForeignKeyViolation) insert or update on table "album_scoring" violates foreign key constraint "album_scoring_username_fkey"
+DETAIL:  Key (username)=(Nicobolo) is not present in table "users".
+
+[SQL: INSERT INTO album_scoring (album_id, username, score, tier, favorite)VALUES ('70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo', '0', '1', 'False');]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-06-18 13:44:19,605 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,605 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,605 BACKEND LOW INFO Preparing to execute the function <function list_album at 0x718fcb60c4a0> with arguments ['70SIbPN8OGNl9TtwsAe2RM']
+2026-06-18 13:44:19,605 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,605 BACKEND LOW INFO Executing list_album Query
+2026-06-18 13:44:19,606 BACKEND LOW INFO list_album Query was successful
+2026-06-18 13:44:19,606 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,606 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,606 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,607 BACKEND LOW INFO Preparing to execute the function <function list_artist at 0x718fcb60c400> with arguments ['1xUhNgw4eJDZfvumIpcz1B']
+2026-06-18 13:44:19,607 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,607 BACKEND LOW INFO Executing list_artist Query
+2026-06-18 13:44:19,607 BACKEND LOW INFO list_artist Query was successful
+2026-06-18 13:44:19,607 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,608 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,608 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,608 BACKEND LOW INFO Preparing to execute the function <function get_album_rating at 0x718fcb60c7c0> with arguments ['70SIbPN8OGNl9TtwsAe2RM', 'Nicobolo']
+2026-06-18 13:44:19,608 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,608 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,609 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,609 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,609 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['266B3fma0lm0dlvG7Y0xAb', 'Nicobolo']
+2026-06-18 13:44:19,609 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,609 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,609 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,609 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,610 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['2ZUNu821yEep2HDhqdiW2I', 'Nicobolo']
+2026-06-18 13:44:19,610 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,610 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,610 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,610 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,610 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['7BdU8966BjT89aGjzBYEyc', 'Nicobolo']
+2026-06-18 13:44:19,610 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,610 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,611 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,611 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,611 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['2W93TFRFxwtXJrFKjIjHBy', 'Nicobolo']
+2026-06-18 13:44:19,611 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,611 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,611 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,611 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,611 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['1EVximLuJ0CT9YOxmUmZkV', 'Nicobolo']
+2026-06-18 13:44:19,611 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,612 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,612 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,612 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,612 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['0afEzeHE8HKSFrPOpVsllz', 'Nicobolo']
+2026-06-18 13:44:19,612 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,612 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,612 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,612 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,612 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['28Mc4EnGvpXZmqDw6lq3n3', 'Nicobolo']
+2026-06-18 13:44:19,612 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,613 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,613 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,613 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,613 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['4264BNIdNozFBHiSM6gjd8', 'Nicobolo']
+2026-06-18 13:44:19,613 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,613 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,614 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,614 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,614 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['0YtXa98R37YMimtlrj7OVz', 'Nicobolo']
+2026-06-18 13:44:19,614 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,614 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,614 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,614 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,614 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['7yBvoQKWtOJ9yk5kuAusCp', 'Nicobolo']
+2026-06-18 13:44:19,614 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,615 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,615 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,615 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,615 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['47mX64ZrnihhxcmVJFpgow', 'Nicobolo']
+2026-06-18 13:44:19,615 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,615 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,615 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,615 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,615 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['5cNdxhsddXJv9i8dsYwRt9', 'Nicobolo']
+2026-06-18 13:44:19,615 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,616 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,616 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,616 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,616 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['3oJmtmYvSE2ZtT7hdIWI9x', 'Nicobolo']
+2026-06-18 13:44:19,616 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,616 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,616 BACKEND LOW INFO Performing Action
+2026-06-18 13:44:19,616 BACKEND LOW INFO Setting Up
+2026-06-18 13:44:19,616 BACKEND LOW INFO Preparing to execute the function <function get_track_rating at 0x718fcb60c860> with arguments ['3h0RwraaqZazV1XCkziTi8', 'Nicobolo']
+2026-06-18 13:44:19,616 BACKEND LOW INFO Connecting to the Database
+2026-06-18 13:44:19,617 BACKEND LOW INFO Process exited successfully
+2026-06-18 13:44:19,617 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:19] "POST /album HTTP/1.1" 200 -
+2026-06-18 13:44:20,108 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:20] "[36mGET /static/css/global.css HTTP/1.1[0m" 304 -
+2026-06-18 13:44:20,138 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:20] "[36mGET /static/css/album.css HTTP/1.1[0m" 304 -
+2026-06-18 13:44:20,199 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:20] "[36mGET /static/img/User.jpg HTTP/1.1[0m" 304 -
+2026-06-18 13:44:37,248 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:37] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-18 13:44:37,249 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:37] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-18 13:44:37,251 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-18 13:44:58,343 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:44:58] "GET /graphql HTTP/1.1" 200 -
+2026-06-18 13:45:04,902 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:45:04] "POST /graphql HTTP/1.1" 200 -
+2026-06-18 13:45:14,812 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:45:14] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-18 13:45:14,899 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:45:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-18 13:45:14,900 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:45:14] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-18 13:47:35,131 werkzeug INFO 127.0.0.1 - - [18/Jun/2026 13:47:35] "POST /graphql HTTP/1.1" 200 -
